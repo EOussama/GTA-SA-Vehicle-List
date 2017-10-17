@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B81E72A1-D59B-42F4-B574-74839A12D346}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SA_MP_Vehicle_List</RootNamespace>
+    <AssemblyName>SA-MP Vehicle List</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>C:\Users\oussa\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B7BF0421394ABAF913CEA53853921A67C48A366B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SA-MP Vehicle List_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class_Vehicle.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Copy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Copy.Designer.cs">
+      <DependentUpon>Form_Copy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Copy.resx">
+      <DependentUpon>Form_Copy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SA-MP Vehicle List_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_401.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_402.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_403.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_404.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_405.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_406.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_407.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_408.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_409.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_410.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_411.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_412.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_413.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_414.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_415.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_416.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_417.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_418.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_419.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_420.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_421.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_422.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_423.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_424.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_425.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_426.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_427.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_428.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_429.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_430.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_431.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_432.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_433.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_434.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_435.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_436.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_437.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_438.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_439.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_440.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_441.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_442.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_443.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_444.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_445.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_446.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_447.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_448.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_449.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_450.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_451.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_452.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_453.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_454.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_455.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_456.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_457.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_458.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_459.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_460.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_461.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_462.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_463.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_464.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_465.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_466.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_467.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_468.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_469.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_470.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_471.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_472.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_473.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_474.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_475.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_476.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_477.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_478.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_479.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_480.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_481.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_482.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_483.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_484.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_485.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_486.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_487.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_488.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_489.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_490.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_491.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_492.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_493.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_494.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_495.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_496.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_497.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_498.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_499.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_500.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_501.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_502.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_503.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_504.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_505.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_506.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_507.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_508.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_509.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_510.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_511.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_512.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_513.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_514.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_515.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_516.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_517.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_518.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_519.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_520.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_521.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_522.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_523.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_524.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_525.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_526.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_527.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_528.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_529.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_530.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_531.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_532.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_533.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_534.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_535.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_536.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_537.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_538.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_539.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_540.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_541.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_542.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_543.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_544.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_545.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_546.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_547.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_548.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_549.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_550.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_551.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_552.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_553.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_554.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_555.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_556.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_557.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_558.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_559.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_560.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_561.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_562.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_563.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_564.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_565.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_566.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_567.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_568.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_569.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_570.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_571.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_572.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_573.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_574.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_575.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_576.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_577.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_578.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_579.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_580.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_581.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_582.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_583.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_584.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_585.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_586.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_587.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_588.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_589.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_590.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_591.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_592.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_593.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_594.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_595.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_596.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_597.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_598.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_599.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_600.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_601.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_602.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_603.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_604.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_605.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_606.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_607.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_608.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_609.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_610.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vehicle_611.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abstract-white-desktop-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
